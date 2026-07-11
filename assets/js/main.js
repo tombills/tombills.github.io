@@ -63,4 +63,34 @@
     );
     sections.forEach(function (s) { spy.observe(s); });
   }
+
+  /* 5. 本站技术演示：实时时钟 / 运行时长 / 点击计数 */
+  var clockEl = document.getElementById("jsClock");
+  if (clockEl) {
+    var pad = function (n) { return n < 10 ? "0" + n : "" + n; };
+    var tick = function () {
+      var d = new Date();
+      clockEl.textContent = pad(d.getHours()) + ":" + pad(d.getMinutes()) + ":" + pad(d.getSeconds());
+    };
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  var uptimeEl = document.getElementById("jsUptime");
+  if (uptimeEl) {
+    var startedAt = Date.now();
+    setInterval(function () {
+      var s = Math.floor((Date.now() - startedAt) / 1000);
+      uptimeEl.textContent = s + " 秒";
+    }, 1000);
+  }
+
+  var counterBtn = document.getElementById("jsCounter");
+  if (counterBtn) {
+    var clicks = 0;
+    counterBtn.addEventListener("click", function () {
+      clicks++;
+      counterBtn.textContent = "已点击 " + clicks + " 次";
+    });
+  }
 })();

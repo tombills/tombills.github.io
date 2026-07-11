@@ -180,6 +180,32 @@
             </div>
           </div>
         </div>
+
+        <!-- 本站技术 / 真实 JS 演示 -->
+        <div class="tech-built reveal">
+          <div class="tech-built__head">
+            <h3 class="tech-built__title">本站技术</h3>
+            <p class="tech-built__desc">本站零框架、纯原生 JavaScript 构建，无任何第三方依赖。下面是一个真实运行的实时演示：</p>
+          </div>
+
+          <div class="tech-demo">
+            <div class="tech-demo__item">
+              <span class="tech-demo__label">实时时钟 · setInterval</span>
+              <span class="tech-demo__value" id="jsClock">--:--:--</span>
+            </div>
+            <div class="tech-demo__item">
+              <span class="tech-demo__label">本页已运行 · Date.now()</span>
+              <span class="tech-demo__value" id="jsUptime">0 秒</span>
+            </div>
+            <div class="tech-demo__item tech-demo__item--action">
+              <span class="tech-demo__label">点击计数 · addEventListener</span>
+              <button class="tech-demo__btn" id="jsCounter" type="button">已点击 0 次</button>
+            </div>
+          </div>
+
+          <p class="tech-built__note">以上均由原生 JavaScript 驱动：<code>setInterval</code> 计时、<code>Date.now()</code> 计算时长、<code>addEventListener</code> 响应点击。</p>
+        </div>
+
       </div>
     </section>
 
