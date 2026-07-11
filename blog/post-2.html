@@ -3,57 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我这一年踩过的性能优化坑 · 你的名字</title>
-  <meta name="description" content="总结了首屏加载、打包体积、运行时内存三方面最值得做的几件事。" />
+  <title>AI 应用：让运营从执行者变成设计者 · 张延涛</title>
+  <meta name="description" content="AI 不是来替代运营的，而是把运营从重复劳动里解放出来，去做更值钱的策略和判断。" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
   <header class="nav">
     <div class="container nav__inner">
-      <a href="../index.html" class="nav__logo">你的名字<span>.</span></a>
+      <a href="../index.html" class="nav__logo">张延涛<span>.</span></a>
       <nav class="nav__menu nav__menu--static">
         <a href="../index.html#home" class="nav__link">首页</a>
         <a href="../index.html#about" class="nav__link">关于</a>
-        <a href="../index.html#projects" class="nav__link">项目</a>
-        <a href="index.html" class="nav__link is-active">博客</a>
+        <a href="../index.html#skills" class="nav__link">能力</a>
+        <a href="../index.html#experience" class="nav__link">经历</a>
+        <a href="../index.html#projects" class="nav__link">案例</a>
+        <a href="../index.html#ai" class="nav__link">AI</a>
+        <a href="index.html" class="nav__link is-active">观点</a>
         <a href="../index.html#contact" class="nav__link">联系</a>
       </nav>
     </div>
   </header>
 
   <article class="article">
-    <a href="index.html" class="article__back">← 返回博客列表</a>
-    <span class="article__date">2026-05-08</span>
-    <h1 class="article__title">我这一年踩过的性能优化坑</h1>
+    <a href="index.html" class="article__back">← 返回观点列表</a>
+    <span class="article__date">2026-06-10</span>
+    <h1 class="article__title">AI 应用：让运营从执行者变成设计者</h1>
 
     <div class="article__body">
-      <p>性能优化不是玄学，但确实有很多「做了半天没效果」的坑。这里把我这一年最值得做的几件事记下来。</p>
+      <p>很多人对 AI 的态度是两个极端：要么当成噱头不屑一顾，要么当成「一键生成爆款」的魔法棒。我都觉得偏了。在我眼里，AI 是运营体系里的一个新工种——它不替代你，但能替你干掉那些最耗时间的重复活。</p>
 
-      <h2>一、首屏加载</h2>
+      <h2>一、AI 承接「重复」，人保留「判断」</h2>
+      <p>运营里大量工作是重复的：写初稿、整理数据、找选题、搭框架。这些交给 AI，人就能把精力放在真正值钱的地方——策略方向、用户洞察、转化设计。</p>
+      <blockquote>未来运营的核心竞争力，不是重复执行，而是利用 AI 提升策略、内容和效率。</blockquote>
+
+      <h2>二、我实际在用的几种方式</h2>
       <ul>
-        <li>图片用 <code>webp</code> + 合理尺寸，别直接丢原图。</li>
-        <li>关键 CSS 内联，非关键延迟加载。</li>
-        <li>字体用 <code>font-display: swap</code>，避免文字「憋」住。</li>
+        <li><strong>AI 辅助内容策划</strong>：把账号定位和目标丢给模型，让它产出选题方向和角度清单，我再筛选。</li>
+        <li><strong>AI 生成营销方案</strong>：先给框架和约束，让它出初版，我改判断和节奏，效率至少翻倍。</li>
+        <li><strong>AI 分析行业趋势</strong>：让它从大量信息里提炼结构，辅助我做决策，而不是替我做决策。</li>
+        <li><strong>AI 搭建运营流程</strong>：把 SOP 和提示词固化下来，让团队新人也能稳定产出。</li>
       </ul>
 
-      <h2>二、打包体积</h2>
-      <p>先量再砍。用打包分析工具看看到底是谁占了体积，再决定是拆包、还是换更轻的库。</p>
-      <pre><code># 以 vite 为例看体积分布
-npx vite-bundle-visualizer</code></pre>
+      <h2>三、关键在「提示词」和「流程」</h2>
+      <p>AI 的输出质量，取决于你给的上下文和结构。同样是写脚本，丢一句「写个短视频脚本」和给「账号定位 + 目标人群 + 痛点 + 时长 + 风格」，结果天差地别。所以我把提示词和流程当成运营资产来沉淀。</p>
 
-      <h2>三、运行时内存</h2>
-      <p>最隐蔽的坑。事件监听、定时器、大数组，用完不清理就会慢慢泄漏。养成「创建即规划销毁」的习惯。</p>
-
-      <blockquote>优化之前先有指标，否则你只是在猜。</blockquote>
-
-      <h2>结语</h2>
-      <p>真正能打动用户的，往往是那几个「看起来很朴素」的改动。把基础做对，比追新潮方案重要得多。</p>
+      <h2>小结</h2>
+      <p>别把 AI 当替代者，也别当许愿池。把它当成一个能力很强、但需要你指挥的新同事——你做设计者，它做执行者，运营效率会完全不同。</p>
     </div>
   </article>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> 你的名字</span>
+      <span>© <span id="year"></span> 张延涛</span>
       <a href="../index.html" class="footer__top">回到首页 ↑</a>
     </div>
   </footer>

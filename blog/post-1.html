@@ -3,57 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>如何搭建一个零成本的个人网站 · 你的名字</title>
-  <meta name="description" content="用纯静态页面 + GitHub Pages 把个人网站跑起来，全程不花一分钱。" />
+  <title>新媒体趋势：流量见顶之后，运营该拼什么 · 张延涛</title>
+  <meta name="description" content="当红利退去，真正拉开差距的不是某个平台的玩法，而是把内容、私域和转化连成体系的能力。" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
   <header class="nav">
     <div class="container nav__inner">
-      <a href="../index.html" class="nav__logo">你的名字<span>.</span></a>
+      <a href="../index.html" class="nav__logo">张延涛<span>.</span></a>
       <nav class="nav__menu nav__menu--static">
         <a href="../index.html#home" class="nav__link">首页</a>
         <a href="../index.html#about" class="nav__link">关于</a>
-        <a href="../index.html#projects" class="nav__link">项目</a>
-        <a href="index.html" class="nav__link is-active">博客</a>
+        <a href="../index.html#skills" class="nav__link">能力</a>
+        <a href="../index.html#experience" class="nav__link">经历</a>
+        <a href="../index.html#projects" class="nav__link">案例</a>
+        <a href="../index.html#ai" class="nav__link">AI</a>
+        <a href="index.html" class="nav__link is-active">观点</a>
         <a href="../index.html#contact" class="nav__link">联系</a>
       </nav>
     </div>
   </header>
 
   <article class="article">
-    <a href="index.html" class="article__back">← 返回博客列表</a>
-    <span class="article__date">2026-06-20</span>
-    <h1 class="article__title">如何搭建一个零成本的个人网站</h1>
+    <a href="index.html" class="article__back">← 返回观点列表</a>
+    <span class="article__date">2026-06-28</span>
+    <h1 class="article__title">新媒体趋势：流量见顶之后，运营该拼什么</h1>
 
     <div class="article__body">
-      <p>很多人以为做个人网站又贵又麻烦，其实用<strong>纯静态页面 + GitHub Pages</strong>，全程可以做到零成本、零服务器。这篇就带你走一遍。</p>
+      <p>过去十年，新媒体讲的是「红利」——哪个平台刚起来，哪里就有便宜的流量。但今天，几乎所有主流平台的流量都进入了存量阶段。很多人还在问「下一个爆款平台在哪」，但更该问的是：<strong>当流量不再便宜，运营靠什么赢？</strong></p>
 
-      <h2>第一步：写页面</h2>
-      <p>一个 <code>index.html</code> 加上 CSS/JS 就够了。不需要框架、不需要构建。把内容填进去，本地双击打开就能预览。</p>
+      <h2>一、玩法会过期，体系不会</h2>
+      <p>某个平台的某个玩法，可能三个月就失效。但把「内容生产 → 流量获取 → 私域承接 → 转化复购」串成一条链路的能力，是长期有效的。</p>
+      <p>我见过太多团队，账号做起来就散了：内容火了，但没人接住用户；用户来了，但没转化路径；转化了一次，但没有复购机制。单点很强，整体很弱。</p>
 
-      <h2>第二步：推到 GitHub</h2>
-      <p>新建一个仓库（建议用 <code>你的用户名.github.io</code> 作为仓库名，这样可以直接当主站），把文件推上去：</p>
-      <pre><code>git init
-git add .
-git commit -m "initial site"
-git branch -M main
-git remote add origin git@github.com:你的用户名/你的用户名.github.io.git
-git push -u origin main</code></pre>
+      <h2>二、从「做内容」到「做资产」</h2>
+      <p>内容是消耗品，今天发完明天就沉了。真正值钱的是内容沉淀下来的东西：可被检索的 SEO 资产、可复用的选题库、可训练的团队 SOP、可触达的私域用户。</p>
+      <blockquote>运营的最高形态，不是天天追热点，而是让系统自己持续产生结果。</blockquote>
 
-      <h2>第三步：开启 Pages</h2>
-      <p>在仓库 <strong>Settings → Pages</strong> 里，Source 选择 <code>main</code> 分支、目录选 <code>/ (root)</code>，保存后等一两分钟，访问 <code>https://你的用户名.github.io</code> 就能看到网站了。</p>
-
-      <blockquote>小提示：仓库根目录放一个空的 <code>.nojekyll</code> 文件，可以避免 GitHub 用 Jekyll 处理你的下划线文件夹。</blockquote>
+      <h2>三、人退到后面，做设计者</h2>
+      <p>当 AI 能承担大量内容生产和数据分析，运营者的价值会从「亲手做」转移到「设计怎么做」：定策略、搭流程、看数据、做决策。这是趋势，也是机会。</p>
 
       <h2>小结</h2>
-      <p>这就是最小可行路径。后面想加博客、换主题、绑定自定义域名，都是在这个骨架上慢慢长出来的事。</p>
+      <p>流量见顶不可怕，可怕的是还在用红利期的打法。把内容、私域、转化连成体系，把重复劳动交给工具和 AI，把人留在最值钱的判断上——这就是下一阶段新媒体运营该拼的东西。</p>
     </div>
   </article>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> 你的名字</span>
+      <span>© <span id="year"></span> 张延涛</span>
       <a href="../index.html" class="footer__top">回到首页 ↑</a>
     </div>
   </footer>
