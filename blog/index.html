@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>博客 · 你的名字</title>
+  <meta name="description" content="我的文章列表。" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">你的名字<span>.</span></a>
+      <nav class="nav__menu nav__menu--static">
+        <a href="../index.html#home" class="nav__link">首页</a>
+        <a href="../index.html#about" class="nav__link">关于</a>
+        <a href="../index.html#projects" class="nav__link">项目</a>
+        <a href="index.html" class="nav__link is-active">博客</a>
+        <a href="../index.html#contact" class="nav__link">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section__head">
+        <span class="section__tag">博客</span>
+        <h2 class="section__title">全部文章</h2>
+      </div>
+
+      <div class="posts">
+        <a href="post-1.html" class="post">
+          <span class="post__date">2026-06-20</span>
+          <h3 class="post__title">如何搭建一个零成本的个人网站</h3>
+          <p class="post__excerpt">从零开始，用纯静态页面 + GitHub Pages 把个人网站跑起来，全程不花一分钱……</p>
+          <span class="post__more">阅读全文 →</span>
+        </a>
+        <a href="post-2.html" class="post">
+          <span class="post__date">2026-05-08</span>
+          <h3 class="post__title">我这一年踩过的性能优化坑</h3>
+          <p class="post__excerpt">总结了首屏加载、打包体积、运行时内存三方面最值得做的几件事……</p>
+          <span class="post__more">阅读全文 →</span>
+        </a>
+      </div>
+
+      <div class="center" style="margin-top:32px">
+        <a href="../index.html" class="btn btn--ghost">← 返回首页</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> 你的名字</span>
+      <a href="../index.html" class="footer__top">回到首页 ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

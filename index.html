@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ★ 替换成你的站点标题与描述 -->
+  <title>你的名字 · 个人网站</title>
+  <meta name="description" content="一句话介绍你自己 —— 比如：前端工程师 / 写作者 / 终身学习者。" />
+  <meta name="author" content="你的名字" />
+
+  <!-- Open Graph（分享到社交平台时的预览） -->
+  <meta property="og:title" content="你的名字 · 个人网站" />
+  <meta property="og:description" content="一句话介绍你自己。" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👋</text></svg>" />
+</head>
+<body>
+  <!-- ============ 顶部导航 ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#home" class="nav__logo">你的名字<span>.</span></a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu">
+        <a href="#home" class="nav__link">首页</a>
+        <a href="#about" class="nav__link">关于</a>
+        <a href="#experience" class="nav__link">经历</a>
+        <a href="#projects" class="nav__link">项目</a>
+        <a href="#blog" class="nav__link">博客</a>
+        <a href="#contact" class="nav__link">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ 首页 / Hero ============ -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow reveal">你好，我是</p>
+        <h1 class="hero__title reveal">你的名字</h1>
+        <p class="hero__subtitle reveal">这里写你的身份 / 职业定位 —— 例如「前端工程师 · 开源爱好者 · 写作者」</p>
+        <p class="hero__desc reveal">一段 2–3 句话的自我介绍，让人快速了解你做什么、关心什么、最近在忙什么。</p>
+        <div class="hero__actions reveal">
+          <a href="#projects" class="btn btn--primary">查看我的项目</a>
+          <a href="#contact" class="btn btn--ghost">联系我</a>
+        </div>
+        <div class="hero__stats reveal">
+          <div class="stat"><span class="stat__num">5+</span><span class="stat__label">年经验</span></div>
+          <div class="stat"><span class="stat__num">20+</span><span class="stat__label">项目</span></div>
+          <div class="stat"><span class="stat__num">10k+</span><span class="stat__label">GitHub Stars</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 关于 / 简历式 ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">关于</span>
+          <h2 class="section__title">关于我</h2>
+        </div>
+
+        <div class="about">
+          <div class="about__bio reveal">
+            <p>在这里写一段更完整的自我介绍。可以聊聊你的背景、你热爱的方向、你的工作方式，以及你正在寻找的机会（比如「正在寻找远程前端岗位」或「欢迎技术合作」）。</p>
+            <p>段落之间留出呼吸感，保持简洁。读者扫一眼就能抓住重点。</p>
+          </div>
+
+          <div class="about__skills reveal">
+            <h3 class="about__subtitle">技能栈</h3>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Vue</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Python</span>
+              <span class="tag">Git</span>
+              <span class="tag">Figma</span>
+              <!-- 复制一行即可增加 -->
+            </div>
+
+            <h3 class="about__subtitle">语言</h3>
+            <div class="tags">
+              <span class="tag">中文（母语）</span>
+              <span class="tag">English（Fluent）</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 经历 / 教育 ============ -->
+    <section class="section section--soft" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">经历</span>
+          <h2 class="section__title">工作与教育</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__meta">
+              <span class="timeline__date">2022 — 至今</span>
+              <span class="timeline__place">某某科技公司</span>
+            </div>
+            <h3 class="timeline__role">高级前端工程师</h3>
+            <p class="timeline__desc">负责核心产品的前端架构与性能优化，带领 3 人小组，将首屏加载时间降低 40%。</p>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__meta">
+              <span class="timeline__date">2019 — 2022</span>
+              <span class="timeline__place">某某创业公司</span>
+            </div>
+            <h3 class="timeline__role">前端工程师</h3>
+            <p class="timeline__desc">从 0 到 1 搭建多个 Web 应用，参与产品决策，主导组件库建设。</p>
+          </div>
+
+          <div class="timeline__item reveal">
+            <div class="timeline__meta">
+              <span class="timeline__date">2015 — 2019</span>
+              <span class="timeline__place">某某大学 · 计算机科学</span>
+            </div>
+            <h3 class="timeline__role">学士学位</h3>
+            <p class="timeline__desc">主修软件工程，曾担任开源社团负责人，毕业设计获校级优秀。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 项目 / 作品集 ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">项目</span>
+          <h2 class="section__title">精选项目</h2>
+        </div>
+
+        <div class="grid">
+          <article class="card reveal">
+            <div class="card__top">
+              <span class="card__year">2025</span>
+              <span class="card__badge">开源</span>
+            </div>
+            <h3 class="card__title">项目名称一</h3>
+            <p class="card__desc">一句话描述这个项目解决了什么问题、有什么亮点。</p>
+            <div class="card__tags"><span class="tag tag--sm">React</span><span class="tag tag--sm">TypeScript</span></div>
+            <div class="card__links">
+              <a href="#" class="card__link">演示 ↗</a>
+              <a href="#" class="card__link">源码 ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__top">
+              <span class="card__year">2024</span>
+              <span class="card__badge">产品</span>
+            </div>
+            <h3 class="card__title">项目名称二</h3>
+            <p class="card__desc">一句话描述这个项目解决了什么问题、有什么亮点。</p>
+            <div class="card__tags"><span class="tag tag--sm">Vue</span><span class="tag tag--sm">Node.js</span></div>
+            <div class="card__links">
+              <a href="#" class="card__link">演示 ↗</a>
+              <a href="#" class="card__link">源码 ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__top">
+              <span class="card__year">2023</span>
+              <span class="card__badge">实验</span>
+            </div>
+            <h3 class="card__title">项目名称三</h3>
+            <p class="card__desc">一句话描述这个项目解决了什么问题、有什么亮点。</p>
+            <div class="card__tags"><span class="tag tag--sm">Python</span><span class="tag tag--sm">AI</span></div>
+            <div class="card__links">
+              <a href="#" class="card__link">演示 ↗</a>
+              <a href="#" class="card__link">源码 ↗</a>
+            </div>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__top">
+              <span class="card__year">2022</span>
+              <span class="card__badge">工具</span>
+            </div>
+            <h3 class="card__title">项目名称四</h3>
+            <p class="card__desc">一句话描述这个项目解决了什么问题、有什么亮点。</p>
+            <div class="card__tags"><span class="tag tag--sm">Go</span><span class="tag tag--sm">CLI</span></div>
+            <div class="card__links">
+              <a href="#" class="card__link">演示 ↗</a>
+              <a href="#" class="card__link">源码 ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 博客 ============ -->
+    <section class="section section--soft" id="blog">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">博客</span>
+          <h2 class="section__title">最近写的</h2>
+        </div>
+
+        <div class="posts">
+          <a href="blog/post-1.html" class="post reveal">
+            <span class="post__date">2026-06-20</span>
+            <h3 class="post__title">如何搭建一个零成本的个人网站</h3>
+            <p class="post__excerpt">从零开始，用纯静态页面 + GitHub Pages 把个人网站跑起来，全程不花一分钱……</p>
+            <span class="post__more">阅读全文 →</span>
+          </a>
+          <a href="blog/post-2.html" class="post reveal">
+            <span class="post__date">2026-05-08</span>
+            <h3 class="post__title">我这一年踩过的性能优化坑</h3>
+            <p class="post__excerpt">总结了首屏加载、打包体积、运行时内存三方面最值得做的几件事……</p>
+            <span class="post__more">阅读全文 →</span>
+          </a>
+        </div>
+
+        <div class="center reveal">
+          <a href="blog/" class="btn btn--ghost">查看全部文章</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 联系 ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <h2 class="contact__title">一起做点有意思的事？</h2>
+          <p class="contact__desc">无论是合作、招聘还是单纯聊聊技术，都欢迎找我。</p>
+          <div class="contact__links">
+            <a href="mailto:you@example.com" class="btn btn--primary">发邮件</a>
+            <a href="https://github.com/yourname" class="btn btn--ghost" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://twitter.com/yourname" class="btn btn--ghost" target="_blank" rel="noopener">Twitter / X</a>
+            <a href="https://www.linkedin.com/in/yourname" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> 你的名字. 保留所有权利。</span>
+      <a href="#home" class="footer__top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

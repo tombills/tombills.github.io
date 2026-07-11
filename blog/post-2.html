@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我这一年踩过的性能优化坑 · 你的名字</title>
+  <meta name="description" content="总结了首屏加载、打包体积、运行时内存三方面最值得做的几件事。" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">你的名字<span>.</span></a>
+      <nav class="nav__menu nav__menu--static">
+        <a href="../index.html#home" class="nav__link">首页</a>
+        <a href="../index.html#about" class="nav__link">关于</a>
+        <a href="../index.html#projects" class="nav__link">项目</a>
+        <a href="index.html" class="nav__link is-active">博客</a>
+        <a href="../index.html#contact" class="nav__link">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="article">
+    <a href="index.html" class="article__back">← 返回博客列表</a>
+    <span class="article__date">2026-05-08</span>
+    <h1 class="article__title">我这一年踩过的性能优化坑</h1>
+
+    <div class="article__body">
+      <p>性能优化不是玄学，但确实有很多「做了半天没效果」的坑。这里把我这一年最值得做的几件事记下来。</p>
+
+      <h2>一、首屏加载</h2>
+      <ul>
+        <li>图片用 <code>webp</code> + 合理尺寸，别直接丢原图。</li>
+        <li>关键 CSS 内联，非关键延迟加载。</li>
+        <li>字体用 <code>font-display: swap</code>，避免文字「憋」住。</li>
+      </ul>
+
+      <h2>二、打包体积</h2>
+      <p>先量再砍。用打包分析工具看看到底是谁占了体积，再决定是拆包、还是换更轻的库。</p>
+      <pre><code># 以 vite 为例看体积分布
+npx vite-bundle-visualizer</code></pre>
+
+      <h2>三、运行时内存</h2>
+      <p>最隐蔽的坑。事件监听、定时器、大数组，用完不清理就会慢慢泄漏。养成「创建即规划销毁」的习惯。</p>
+
+      <blockquote>优化之前先有指标，否则你只是在猜。</blockquote>
+
+      <h2>结语</h2>
+      <p>真正能打动用户的，往往是那几个「看起来很朴素」的改动。把基础做对，比追新潮方案重要得多。</p>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> 你的名字</span>
+      <a href="../index.html" class="footer__top">回到首页 ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

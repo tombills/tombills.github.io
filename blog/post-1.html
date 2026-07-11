@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>如何搭建一个零成本的个人网站 · 你的名字</title>
+  <meta name="description" content="用纯静态页面 + GitHub Pages 把个人网站跑起来，全程不花一分钱。" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="../index.html" class="nav__logo">你的名字<span>.</span></a>
+      <nav class="nav__menu nav__menu--static">
+        <a href="../index.html#home" class="nav__link">首页</a>
+        <a href="../index.html#about" class="nav__link">关于</a>
+        <a href="../index.html#projects" class="nav__link">项目</a>
+        <a href="index.html" class="nav__link is-active">博客</a>
+        <a href="../index.html#contact" class="nav__link">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="article">
+    <a href="index.html" class="article__back">← 返回博客列表</a>
+    <span class="article__date">2026-06-20</span>
+    <h1 class="article__title">如何搭建一个零成本的个人网站</h1>
+
+    <div class="article__body">
+      <p>很多人以为做个人网站又贵又麻烦，其实用<strong>纯静态页面 + GitHub Pages</strong>，全程可以做到零成本、零服务器。这篇就带你走一遍。</p>
+
+      <h2>第一步：写页面</h2>
+      <p>一个 <code>index.html</code> 加上 CSS/JS 就够了。不需要框架、不需要构建。把内容填进去，本地双击打开就能预览。</p>
+
+      <h2>第二步：推到 GitHub</h2>
+      <p>新建一个仓库（建议用 <code>你的用户名.github.io</code> 作为仓库名，这样可以直接当主站），把文件推上去：</p>
+      <pre><code>git init
+git add .
+git commit -m "initial site"
+git branch -M main
+git remote add origin git@github.com:你的用户名/你的用户名.github.io.git
+git push -u origin main</code></pre>
+
+      <h2>第三步：开启 Pages</h2>
+      <p>在仓库 <strong>Settings → Pages</strong> 里，Source 选择 <code>main</code> 分支、目录选 <code>/ (root)</code>，保存后等一两分钟，访问 <code>https://你的用户名.github.io</code> 就能看到网站了。</p>
+
+      <blockquote>小提示：仓库根目录放一个空的 <code>.nojekyll</code> 文件，可以避免 GitHub 用 Jekyll 处理你的下划线文件夹。</blockquote>
+
+      <h2>小结</h2>
+      <p>这就是最小可行路径。后面想加博客、换主题、绑定自定义域名，都是在这个骨架上慢慢长出来的事。</p>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> 你的名字</span>
+      <a href="../index.html" class="footer__top">回到首页 ↑</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

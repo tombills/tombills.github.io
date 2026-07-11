@@ -1,0 +1,6 @@
+# 工作区内部配置，不纳入站点仓库
+.workbuddy/
+
+# 系统/编辑器文件
+.DS_Store
+Thumbs.db
