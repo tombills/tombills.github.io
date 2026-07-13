@@ -1,8 +1,39 @@
----
-layout: default
-title: 观点 · 涛talk
-description: 涛talk关于新媒体、AI 与增长的持续思考。
----
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>观点 · 涛talk</title>
+  <meta name="description" content="涛talk关于新媒体、AI 与增长的持续思考。" />
+  <meta name="author" content="涛talk" />
+  <meta property="og:title" content="观点 · 涛talk" />
+  <meta property="og:description" content="涛talk关于新媒体、AI 与增长的持续思考。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128200;</text></svg>" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">涛talk<span>.</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu">
+        <a href="/#home" class="nav__link">首页</a>
+        <a href="/#about" class="nav__link">关于</a>
+        <a href="/#skills" class="nav__link">能力</a>
+        <a href="/#experience" class="nav__link">经历</a>
+        <a href="/#projects" class="nav__link">案例</a>
+        <a href="/#ai" class="nav__link">AI</a>
+        <a href="/blog/" class="nav__link is-active">观点</a>
+        <a href="/#contact" class="nav__link">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
 <div class="section">
   <div class="container">
     <div class="section__head">
@@ -11,14 +42,35 @@ description: 涛talk关于新媒体、AI 与增长的持续思考。
     </div>
 
     <div class="posts">
-      {% for post in site.posts %}
-      <a href="{{ post.url }}" class="post">
-        <span class="post__date">{{ post.date | date: "%Y-%m-%d" }}</span>
-        <h3 class="post__title">{{ post.title }}</h3>
-        <p class="post__excerpt">{{ post.excerpt | strip_html | truncate: 50 }}</p>
+      
+      <a href="/blog/post-1.html" class="post">
+        <span class="post__date">2026-06-28</span>
+        <h3 class="post__title">新媒体趋势：流量见顶之后，运营该拼什么</h3>
+        <p class="post__excerpt">当红利退去，真正拉开差距的不是某个平台的玩法，而是把内容、私域和转化连成体系的能力。</p>
         <span class="post__more">阅读全文 →</span>
       </a>
-      {% endfor %}
+      
+      <a href="/blog/post-2.html" class="post">
+        <span class="post__date">2026-06-10</span>
+        <h3 class="post__title">AI 应用：把 AI 嵌进运营流程，而不是当玩具</h3>
+        <p class="post__excerpt">AI 的价值不在于生成多少内容，而在于把重复劳动从运营链路里抽走，让人专注判断与决策。</p>
+        <span class="post__more">阅读全文 →</span>
+      </a>
+      
+      <a href="/blog/post-3.html" class="post">
+        <span class="post__date">2026-05-22</span>
+        <h3 class="post__title">企业增长：从流量思维到体系思维</h3>
+        <p class="post__excerpt">单点获客越来越贵，真正可持续的增长来自把内容、私域与转化连成一套可复用体系。</p>
+        <span class="post__more">阅读全文 →</span>
+      </a>
+      
+      <a href="/blog/post-4.html" class="post">
+        <span class="post__date">2026-05-05</span>
+        <h3 class="post__title">私域运营：把流量变成留量</h3>
+        <p class="post__excerpt">公域引流只是开始，能否把流量沉淀为可反复触达的私域资产，才决定长期成本。</p>
+        <span class="post__more">阅读全文 →</span>
+      </a>
+      
     </div>
 
     <div class="center" style="margin-top:32px">
@@ -26,3 +78,15 @@ description: 涛talk关于新媒体、AI 与增长的持续思考。
     </div>
   </div>
 </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> 涛talk. 保留所有权利。</span>
+      <a href="/" class="footer__top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

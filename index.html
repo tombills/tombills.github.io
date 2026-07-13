@@ -1,36 +1,71 @@
----
-layout: default
-title: 涛talk · 新媒体增长运营经理 / 数字化运营负责人
-description: 涛talk，专注品牌增长、新媒体运营与商业转化的数字化运营负责人。擅长从0到1搭建内容体系、账号矩阵、私域转化与运营体系。
----
-{% assign s = site.data.site %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>涛talk · 新媒体增长运营经理 / 数字化运营负责人</title>
+  <meta name="description" content="涛talk，专注品牌增长、新媒体运营与商业转化的数字化运营负责人。擅长从0到1搭建内容体系、账号矩阵、私域转化与运营体系。" />
+  <meta name="author" content="涛talk" />
+  <meta property="og:title" content="涛talk · 新媒体增长运营经理 / 数字化运营负责人" />
+  <meta property="og:description" content="涛talk，专注品牌增长、新媒体运营与商业转化的数字化运营负责人。擅长从0到1搭建内容体系、账号矩阵、私域转化与运营体系。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128200;</text></svg>" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">涛talk<span>.</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu">
+        <a href="#home" class="nav__link">首页</a>
+        <a href="#about" class="nav__link">关于</a>
+        <a href="#skills" class="nav__link">能力</a>
+        <a href="#experience" class="nav__link">经历</a>
+        <a href="#projects" class="nav__link">案例</a>
+        <a href="#ai" class="nav__link">AI</a>
+        <a href="/blog/" class="nav__link">观点</a>
+        <a href="#contact" class="nav__link">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+
 
   <!-- ============ 首页 / Hero ============ -->
   <section class="hero" id="home">
     <div class="container hero__inner">
       <div class="hero__main">
-        <p class="hero__eyebrow reveal">{{ s.hero.eyebrow }}</p>
-        <h1 class="hero__title reveal">{{ s.hero.name }}</h1>
-        <p class="hero__subtitle reveal">{{ s.hero.subtitle }}</p>
-        <p class="hero__desc reveal">{{ s.hero.desc }}</p>
+        <p class="hero__eyebrow reveal">你好，我是</p>
+        <h1 class="hero__title reveal">涛talk</h1>
+        <p class="hero__subtitle reveal">新媒体增长运营经理 / 数字化运营负责人</p>
+        <p class="hero__desc reveal">专注品牌增长、新媒体运营与商业转化。拥有多年互联网、品牌运营及新媒体实战经验，擅长从 0 到 1 搭建内容体系、账号矩阵、私域转化和团队运营流程。</p>
         <div class="hero__actions reveal">
           <a href="#projects" class="btn btn--primary">查看项目案例</a>
           <a href="#contact" class="btn btn--ghost">联系合作</a>
           <a href="#about" class="btn btn--ghost">关于我</a>
         </div>
         <div class="hero__stats reveal">
-          {% for stat in s.hero.stats %}
-          <div class="stat"><span class="stat__num">{{ stat.num }}</span><span class="stat__label">{{ stat.label }}</span></div>
-          {% endfor %}
+          
+          <div class="stat"><span class="stat__num">15年+</span><span class="stat__label">运营实战</span></div>
+          
+          <div class="stat"><span class="stat__num">3 大</span><span class="stat__label">服务行业</span></div>
+          
+          <div class="stat"><span class="stat__num">25+</span><span class="stat__label">核心能力项</span></div>
+          
         </div>
       </div>
 
       <aside class="hero__card reveal">
-        <div class="hero__avatar">{{ s.hero.card.avatar }}</div>
-        <p class="hero__card-name">{{ s.hero.card.name }}</p>
-        <p class="hero__card-role">{{ s.hero.card.role }}</p>
+        <div class="hero__avatar">涛</div>
+        <p class="hero__card-name">涛talk</p>
+        <p class="hero__card-role">新媒体增长运营负责人</p>
         <div class="hero__card-tags tags">
-          {% for t in s.hero.card.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+          <span class="tag">增长</span><span class="tag">私域</span><span class="tag">品牌</span><span class="tag">AI</span>
         </div>
       </aside>
     </div>
@@ -41,30 +76,30 @@ description: 涛talk，专注品牌增长、新媒体运营与商业转化的数
     <div class="container">
       <div class="section__head reveal">
         <span class="section__tag">关于</span>
-        <h2 class="section__title">关于{{ s.hero.name }}</h2>
+        <h2 class="section__title">关于涛talk</h2>
       </div>
 
       <div class="about-block reveal">
-        <p class="about__lead">{{ s.about.lead }}</p>
+        <p class="about__lead">我是一名专注于企业增长的新媒体运营负责人。</p>
 
-        <h3 class="about__subtitle">{{ s.about.experiences_title }}</h3>
+        <h3 class="about__subtitle">职业经历覆盖</h3>
         <div class="tags">
-          {% for t in s.about.experiences %}<span class="tag">{{ t }}</span>{% endfor %}
+          <span class="tag">SEO 搜索营销</span><span class="tag">网站运营</span><span class="tag">品牌建设</span><span class="tag">新媒体矩阵</span><span class="tag">短视频 IP 打造</span><span class="tag">私域增长</span><span class="tag">团队管理</span><span class="tag">网站开发</span><span class="tag">小程序商城</span>
         </div>
 
-        <h3 class="about__subtitle">{{ s.about.industries_title }}</h3>
+        <h3 class="about__subtitle">参与的行业数字化运营建设</h3>
         <div class="tags">
-          {% for t in s.about.industries %}<span class="tag">{{ t }}</span>{% endfor %}
+          <span class="tag">美业连锁品牌</span><span class="tag">职业教育</span><span class="tag">大健康产业</span>
         </div>
 
-        <p class="statement">{{ s.about.statement1 }}</p>
+        <p class="statement">我的核心能力不是单点内容生产，而是：从流量获取，到用户转化，再到运营体系搭建。</p>
 
-        <h3 class="about__subtitle">{{ s.about.advantages_title }}</h3>
-        <p class="about__text">{{ s.about.advantages_text }}</p>
+        <h3 class="about__subtitle">个人优势</h3>
+        <p class="about__text">拥有 10 年以上互联网及品牌运营经验，专注于品牌全案策划与新媒体增长方向。擅长从 0 到 1 搭建运营团队与标准化流程体系，具备跨部门资源整合及企业数字化管理能力。</p>
         <div class="adv-grid">
-          {% for a in s.about.advantages %}<div class="adv-item"><span class="adv-item__dot"></span><span>{{ a }}</span></div>{% endfor %}
+          <div class="adv-item"><span class="adv-item__dot"></span><span>品牌 IP 打造</span></div><div class="adv-item"><span class="adv-item__dot"></span><span>内容增长模型构建</span></div><div class="adv-item"><span class="adv-item__dot"></span><span>私域流量转化闭环设计</span></div><div class="adv-item"><span class="adv-item__dot"></span><span>团队梯队建设</span></div>
         </div>
-        <p class="statement">{{ s.about.statement2 }}</p>
+        <p class="statement">过往主导连锁品牌线上运营与信息化建设，通过 “内容 + 流量 + 转化 + 体系” 的一体化运营模式，成功助力企业构建可持续增长引擎。</p>
       </div>
     </div>
   </section>
@@ -78,21 +113,56 @@ description: 涛talk，专注品牌增长、新媒体运营与商业转化的数
       </div>
 
       <div class="skills-grid">
-        {% for skill in s.skills %}
+        
         <div class="skill-card reveal">
-          <h3 class="skill-card__title">{{ skill.title }}</h3>
+          <h3 class="skill-card__title">增长与流量</h3>
           <div class="tags">
-            {% for t in skill.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+            <span class="tag">新媒体增长</span><span class="tag">用户增长</span><span class="tag">短视频账号定位</span><span class="tag">内容策略规划</span><span class="tag">爆款选题设计</span><span class="tag">数据分析优化</span>
           </div>
         </div>
-        {% endfor %}
+        
+        <div class="skill-card reveal">
+          <h3 class="skill-card__title">品牌与营销</h3>
+          <div class="tags">
+            <span class="tag">品牌运营</span><span class="tag">品牌定位</span><span class="tag">营销策划</span><span class="tag">活动推广</span>
+          </div>
+        </div>
+        
+        <div class="skill-card reveal">
+          <h3 class="skill-card__title">私域与用户</h3>
+          <div class="tags">
+            <span class="tag">私域运营</span><span class="tag">企业微信体系</span><span class="tag">用户运营</span><span class="tag">转化 SOP</span><span class="tag">CRM 管理</span>
+          </div>
+        </div>
+        
+        <div class="skill-card reveal">
+          <h3 class="skill-card__title">团队与管理</h3>
+          <div class="tags">
+            <span class="tag">团队管理</span><span class="tag">SOP 搭建</span><span class="tag">岗位设计</span><span class="tag">KPI 制定</span><span class="tag">人员培养</span>
+          </div>
+        </div>
+        
+        <div class="skill-card reveal">
+          <h3 class="skill-card__title">AI 与效率</h3>
+          <div class="tags">
+            <span class="tag">AI 效率提升</span><span class="tag">AI 工作流搭建</span><span class="tag">提示词工程</span><span class="tag">AI 辅助运营</span><span class="tag">自动化提效</span>
+          </div>
+        </div>
+        
+        <div class="skill-card reveal">
+          <h3 class="skill-card__title">技术与开发</h3>
+          <div class="tags">
+            <span class="tag">网站开发</span><span class="tag">JavaScript</span><span class="tag">微信小程序</span><span class="tag">小程序商城</span><span class="tag">前端交互</span><span class="tag">数据对接</span>
+          </div>
+        </div>
+        
       </div>
 
       <!-- 本站技术 / 真实 JS 演示 -->
       <div class="tech-built reveal">
         <div class="tech-built__head">
-          <h3 class="tech-built__title">{{ s.tech_demo.title }}</h3>
-          <p class="tech-built__desc">{{ s.tech_demo.desc }}</p>
+          <h3 class="tech-built__title">本站技术</h3>
+          <p class="tech-built__desc">本站零框架、纯原生 JavaScript 构建，无任何第三方依赖。下面是一个真实运行的实时演示：</p>
         </div>
 
         <div class="tech-demo">
@@ -110,7 +180,7 @@ description: 涛talk，专注品牌增长、新媒体运营与商业转化的数
           </div>
         </div>
 
-        <p class="tech-built__note">{{ s.tech_demo.note }}</p>
+        <p class="tech-built__note">以上均由原生 JavaScript 驱动：setInterval 计时、Date.now() 计算时长、addEventListener 响应点击。</p>
       </div>
     </div>
   </section>
@@ -124,22 +194,67 @@ description: 涛talk，专注品牌增长、新媒体运营与商业转化的数
       </div>
 
       <div class="timeline">
-        {% for item in s.experience %}
+        
         <div class="timeline__item reveal">
           <div class="timeline__meta">
-            <span class="timeline__date">{{ item.date }}</span>
-            <span class="timeline__place">{{ item.place }}</span>
+            <span class="timeline__date">2015 — 2026</span>
+            <span class="timeline__place">君丝佳连锁品牌</span>
           </div>
-          <h3 class="timeline__role">{{ item.role }}</h3>
+          <h3 class="timeline__role">品牌运营经理 / 新媒体负责人</h3>
 
-          {% for block in item.blocks %}
-          <h4 class="block-label">{{ block.label }}</h4>
-          <ul class="mini-list {% if block.label == '成果' %}mini-list--check{% endif %}">
-            {% for li in block.items %}<li>{{ li }}</li>{% endfor %}
+          
+          <h4 class="block-label">职责</h4>
+          <ul class="mini-list ">
+            <li>新媒体矩阵搭建与运营：搭建抖音 / 小红书 / 公众号·视频号矩阵，制定各平台内容与流量策略，整合 SEM/SEO、社媒、内容平台构建全域增长生态</li><li>新媒体私域体系打造：基于微信生态搭建私域用户池，通过内容触达、社群运营与裂变活动，实现公域引流向私域沉淀，打造「新媒体引流 — 私域转化」闭环</li><li>新媒体活动策划与落地：主导裂变活动策划·执行·复盘，跨部门协调产品 / 技术 / 市场，结合 O2O 打通线上流量与线下门店服务</li><li>数据驱动新媒体优化：建立数据分析体系，监控曝光 / 点击 / 引流 / 转化等核心指标，复盘持续优化内容、活动与流量策略</li><li>团队管理：领导新媒体运营团队，负责目标拆解、任务分配、绩效管理与技能培训</li>
           </ul>
-          {% endfor %}
+          
+          <h4 class="block-label">成果</h4>
+          <ul class="mini-list mini-list--check">
+            <li>建立线上营销体系</li><li>推动品牌数字化转型</li><li>提升线上获客能力</li>
+          </ul>
+          
         </div>
-        {% endfor %}
+        
+        <div class="timeline__item reveal">
+          <div class="timeline__meta">
+            <span class="timeline__date">2013 — 2015</span>
+            <span class="timeline__place">上海华章（华章 MBA）</span>
+          </div>
+          <h3 class="timeline__role">网站运营 / SEO 搜索营销</h3>
+
+          
+          <h4 class="block-label">职责</h4>
+          <ul class="mini-list ">
+            <li>负责官网运营与 SEO 搜索营销</li><li>关键词布局与内容建设</li><li>搭建内容营销体系，提升自然流量</li><li>推进线上招生获客与转化</li>
+          </ul>
+          
+          <h4 class="block-label">成果</h4>
+          <ul class="mini-list mini-list--check">
+            <li>提升核心关键词搜索排名</li><li>显著增长官网自然流量</li><li>沉淀可复用的内容与 SEO 方法论</li>
+          </ul>
+          
+        </div>
+        
+        <div class="timeline__item reveal">
+          <div class="timeline__meta">
+            <span class="timeline__date">2017 — 2026</span>
+            <span class="timeline__place">君丝佳 · 养发易购 O2O 小程序</span>
+          </div>
+          <h3 class="timeline__role">网站开发 / 小程序商城负责人</h3>
+
+          
+          <h4 class="block-label">职责</h4>
+          <ul class="mini-list ">
+            <li>负责企业官网与营销型网站的规划、前端开发与上线</li><li>主导「养发易购」O2O 微信小程序商城的搭建（商品、订单、支付、会员、到店核销）</li><li>基于 JavaScript 技术栈实现页面交互与前后端数据对接</li><li>打通官网、小程序与后端系统之间的用户与交易数据</li>
+          </ul>
+          
+          <h4 class="block-label">成果</h4>
+          <ul class="mini-list mini-list--check">
+            <li>上线官网与小程序商城，构建线上交易与获客闭环</li><li>沉淀前端开发与小程序交付的标准流程（SOP）</li>
+          </ul>
+          
+        </div>
+        
       </div>
     </div>
   </section>
@@ -153,21 +268,111 @@ description: 涛talk，专注品牌增长、新媒体运营与商业转化的数
       </div>
 
       <div class="cases">
-        {% for p in s.projects %}
+        
         <article class="case reveal">
           <div class="case__head">
-            <span class="case__no">{{ p.no }}</span>
-            <h3 class="case__title">{{ p.title }}</h3>
+            <span class="case__no"></span>
+            <h3 class="case__title">职业教育新媒体增长项目</h3>
           </div>
-          {% for b in p.blocks %}
+          
           <div class="case__block">
-            <span class="case__label">{{ b.label }}</span>
-            {% if b.text %}<p>{{ b.text }}</p>{% endif %}
-            {% if b.tags %}<div class="tags">{% for t in b.tags %}<span class="tag tag--sm">{{ t }}</span>{% endfor %}</div>{% endif %}
+            <span class="case__label">背景</span>
+            <p>传统培训机构线上流量不足，获客高度依赖线下与投放，成本居高不下。</p>
+            
           </div>
-          {% endfor %}
+          
+          <div class="case__block">
+            <span class="case__label">负责</span>
+            
+            <div class="tags"><span class="tag tag--sm">账号定位</span><span class="tag tag--sm">内容策略</span><span class="tag tag--sm">IP 打造</span><span class="tag tag--sm">招生转化</span></div>
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">输出</span>
+            
+            <div class="tags"><span class="tag tag--sm">短视频选题库</span><span class="tag tag--sm">内容生产 SOP</span><span class="tag tag--sm">私信转化流程</span><span class="tag tag--sm">招生增长方案</span></div>
+          </div>
+          
         </article>
-        {% endfor %}
+        
+        <article class="case reveal">
+          <div class="case__head">
+            <span class="case__no"></span>
+            <h3 class="case__title">品牌数字化建设</h3>
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">背景</span>
+            <p>连锁品牌从粗放经营走向数字化运营，需要打通前台营销与后端管理。</p>
+            
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">负责</span>
+            
+            <div class="tags"><span class="tag tag--sm">CRM 系统</span><span class="tag tag--sm">进销存系统</span><span class="tag tag--sm">小程序营销</span><span class="tag tag--sm">O2O 体系</span></div>
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">价值</span>
+            <p>把分散的会员、库存与营销动作接入统一系统，让经营决策有数据可依。</p>
+            
+          </div>
+          
+        </article>
+        
+        <article class="case reveal">
+          <div class="case__head">
+            <span class="case__no"></span>
+            <h3 class="case__title">SEO 增长项目（华章 MBA）</h3>
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">背景</span>
+            <p>高意向用户习惯通过搜索了解院校与课程，自然搜索流量是低成本获客入口。</p>
+            
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">负责</span>
+            
+            <div class="tags"><span class="tag tag--sm">网站优化</span><span class="tag tag--sm">关键词布局</span><span class="tag tag--sm">内容建设</span><span class="tag tag--sm">流量增长</span></div>
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">价值</span>
+            <p>以内容与结构优化承接搜索需求，持续积累可被检索的品牌资产。</p>
+            
+          </div>
+          
+        </article>
+        
+        <article class="case reveal">
+          <div class="case__head">
+            <span class="case__no"></span>
+            <h3 class="case__title">养发易购 O2O 小程序商城</h3>
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">背景</span>
+            <p>品牌需要把公域流量沉淀到自有阵地，并建立可闭环的线上交易能力。</p>
+            
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">负责</span>
+            
+            <div class="tags"><span class="tag tag--sm">官网开发</span><span class="tag tag--sm">微信小程序</span><span class="tag tag--sm">商城搭建</span><span class="tag tag--sm">支付对接</span><span class="tag tag--sm">数据打通</span></div>
+          </div>
+          
+          <div class="case__block">
+            <span class="case__label">价值</span>
+            <p>以 JavaScript 技术栈落地前端交互与交易流程，打通线上商城与线下到店核销，形成「内容引流 — 商城转化 — 到店履约」的 O2O 自有闭环。</p>
+            
+          </div>
+          
+        </article>
+        
       </div>
     </div>
   </section>
@@ -181,11 +386,11 @@ description: 涛talk，专注品牌增长、新媒体运营与商业转化的数
       </div>
 
       <div class="ai reveal">
-        <p class="ai__lead">{{ s.ai.lead }}</p>
-        <p class="ai__desc">{{ s.ai.desc }}</p>
-        <h3 class="about__subtitle">{{ s.ai.tags_title }}</h3>
+        <p class="ai__lead">我相信未来运营人员的核心竞争力，不是重复执行，而是利用 AI 提升策略、内容和效率。</p>
+        <p class="ai__desc">我把 AI 当作运营体系的一部分，而不是零散的工具——从选题到方案，从分析到流程，让 AI 承接重复劳动，把人的精力释放到判断和决策上。</p>
+        <h3 class="about__subtitle">我的 AI 实践</h3>
         <div class="tags">
-          {% for t in s.ai.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+          <span class="tag">AI 辅助内容策划</span><span class="tag">AI 生成营销方案</span><span class="tag">AI 分析行业趋势</span><span class="tag">AI 搭建运营流程</span>
         </div>
       </div>
     </div>
@@ -198,17 +403,38 @@ description: 涛talk，专注品牌增长、新媒体运营与商业转化的数
         <span class="section__tag">观点</span>
         <h2 class="section__title">我的观点</h2>
       </div>
-      <p class="section__intro reveal">{{ s.blog_intro }}</p>
+      <p class="section__intro reveal">关于新媒体、AI 与增长的持续思考。不追热点，只写真正跑通过的逻辑。</p>
 
       <div class="posts">
-        {% for post in site.posts %}
-        <a href="{{ post.url }}" class="post reveal">
-          <span class="post__date">{{ post.date | date: "%Y-%m-%d" }}</span>
-          <h3 class="post__title">{{ post.title }}</h3>
-          <p class="post__excerpt">{{ post.excerpt | strip_html | truncate: 50 }}</p>
+        
+        <a href="/blog/post-1.html" class="post reveal">
+          <span class="post__date">2026-06-28</span>
+          <h3 class="post__title">新媒体趋势：流量见顶之后，运营该拼什么</h3>
+          <p class="post__excerpt">当红利退去，真正拉开差距的不是某个平台的玩法，而是把内容、私域和转化连成体系的能力。</p>
           <span class="post__more">阅读全文 →</span>
         </a>
-        {% endfor %}
+        
+        <a href="/blog/post-2.html" class="post reveal">
+          <span class="post__date">2026-06-10</span>
+          <h3 class="post__title">AI 应用：把 AI 嵌进运营流程，而不是当玩具</h3>
+          <p class="post__excerpt">AI 的价值不在于生成多少内容，而在于把重复劳动从运营链路里抽走，让人专注判断与决策。</p>
+          <span class="post__more">阅读全文 →</span>
+        </a>
+        
+        <a href="/blog/post-3.html" class="post reveal">
+          <span class="post__date">2026-05-22</span>
+          <h3 class="post__title">企业增长：从流量思维到体系思维</h3>
+          <p class="post__excerpt">单点获客越来越贵，真正可持续的增长来自把内容、私域与转化连成一套可复用体系。</p>
+          <span class="post__more">阅读全文 →</span>
+        </a>
+        
+        <a href="/blog/post-4.html" class="post reveal">
+          <span class="post__date">2026-05-05</span>
+          <h3 class="post__title">私域运营：把流量变成留量</h3>
+          <p class="post__excerpt">公域引流只是开始，能否把流量沉淀为可反复触达的私域资产，才决定长期成本。</p>
+          <span class="post__more">阅读全文 →</span>
+        </a>
+        
       </div>
 
       <div class="center reveal">
@@ -221,11 +447,23 @@ description: 涛talk，专注品牌增长、新媒体运营与商业转化的数
   <section class="section" id="contact">
     <div class="container">
       <div class="contact reveal">
-        <h2 class="contact__title">{{ s.contact.title }}</h2>
-        <p class="contact__desc">{{ s.contact.desc }}</p>
+        <h2 class="contact__title">一起做点有增长的事？</h2>
+        <p class="contact__desc">无论是品牌增长、新媒体体系搭建，还是 AI 提效合作，都欢迎找我聊聊。</p>
         <div class="contact__links">
-          {% for l in s.contact.links %}<a href="{{ l.url }}" class="btn btn--{{ l.type }}">{{ l.label }}</a>{% endfor %}
+          <a href="mailto:you@example.com" class="btn btn--primary">发邮件</a><a href="#" class="btn btn--ghost">微信</a><a href="#" class="btn btn--ghost">公众号</a><a href="#" class="btn btn--ghost">小红书</a>
         </div>
       </div>
     </div>
   </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> 涛talk. 保留所有权利。</span>
+      <a href="/" class="footer__top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
