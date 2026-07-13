@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <meta name="author" content="涛talk" />
+  <meta property="og:title" content="{{ page.title | default: site.title }}" />
+  <meta property="og:description" content="{{ page.description | default: site.description }}" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">涛talk<span>.</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu">
+        <a href="/#home" class="nav__link">首页</a>
+        <a href="/#about" class="nav__link">关于</a>
+        <a href="/#skills" class="nav__link">能力</a>
+        <a href="/#experience" class="nav__link">经历</a>
+        <a href="/#projects" class="nav__link">案例</a>
+        <a href="/#ai" class="nav__link">AI</a>
+        <a href="/blog/" class="nav__link {% if page.url contains '/blog' %}is-active{% endif %}">观点</a>
+        <a href="/#contact" class="nav__link">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> 涛talk. 保留所有权利。</span>
+      <a href="/" class="footer__top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

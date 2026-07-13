@@ -1,0 +1,152 @@
+backend:
+  name: github
+  repo: tombills/tombills.github.io
+  branch: main
+  base_url: https://siyu.dpdns.org
+  auth_endpoint: https://siyu.dpdns.org/callback
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "site"
+    label: "全站内容"
+    files:
+      - name: "site-content"
+        label: "网站内容（首页/关于/能力/案例/联系）"
+        file: "_data/site.yml"
+        fields:
+          - name: hero
+            label: "首屏 Hero"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "小标题", widget: string }
+              - { name: name, label: "品牌名", widget: string }
+              - { name: subtitle, label: "副标题", widget: string }
+              - { name: desc, label: "简介", widget: text }
+              - name: stats
+                label: "数据指标"
+                widget: list
+                fields:
+                  - { name: num, label: "数字", widget: string }
+                  - { name: label, label: "说明", widget: string }
+              - name: card
+                label: "右侧身份卡"
+                widget: object
+                fields:
+                  - { name: avatar, label: "头像文字", widget: string }
+                  - { name: name, label: "姓名", widget: string }
+                  - { name: role, label: "头衔", widget: string }
+                  - name: tags
+                    label: "标签"
+                    widget: list
+                    field: { name: tag, label: "标签", widget: string }
+          - name: about
+            label: "关于"
+            widget: object
+            fields:
+              - { name: lead, label: "导语", widget: text }
+              - { name: experiences_title, label: "经历覆盖标题", widget: string }
+              - name: experiences
+                label: "职业经历覆盖"
+                widget: list
+                field: { name: item, label: "项", widget: string }
+              - { name: industries_title, label: "行业标题", widget: string }
+              - name: industries
+                label: "行业"
+                widget: list
+                field: { name: item, label: "项", widget: string }
+              - { name: statement1, label: "强调语1", widget: text }
+              - { name: advantages_title, label: "优势标题", widget: string }
+              - { name: advantages_text, label: "优势正文", widget: text }
+              - name: advantages
+                label: "优势列表"
+                widget: list
+                field: { name: item, label: "项", widget: string }
+              - { name: statement2, label: "强调语2", widget: text }
+          - name: skills
+            label: "能力卡片"
+            widget: list
+            fields:
+              - { name: title, label: "卡片标题", widget: string }
+              - name: tags
+                label: "标签"
+                widget: list
+                field: { name: tag, label: "标签", widget: string }
+          - name: tech_demo
+            label: "本站技术演示"
+            widget: object
+            fields:
+              - { name: title, label: "标题", widget: string }
+              - { name: desc, label: "描述", widget: text }
+              - { name: note, label: "说明", widget: text }
+          - name: experience
+            label: "工作经历"
+            widget: list
+            fields:
+              - { name: date, label: "时间", widget: string }
+              - { name: place, label: "公司", widget: string }
+              - { name: role, label: "职位", widget: string }
+              - name: blocks
+                label: "板块"
+                widget: list
+                fields:
+                  - { name: label, label: "板块名", widget: string }
+                  - name: items
+                    label: "条目"
+                    widget: list
+                    field: { name: item, label: "条目", widget: string }
+          - name: projects
+            label: "项目案例"
+            widget: list
+            fields:
+              - { name: no, label: "编号", widget: string }
+              - { name: title, label: "标题", widget: string }
+              - name: blocks
+                label: "板块"
+                widget: list
+                fields:
+                  - { name: label, label: "板块名", widget: string }
+                  - { name: text, label: "文本（背景/价值，可空）", widget: text, required: false }
+                  - name: tags
+                    label: "标签（负责/输出，可空）"
+                    widget: list
+                    field: { name: tag, label: "标签", widget: string }
+          - name: ai
+            label: "AI 工作方式"
+            widget: object
+            fields:
+              - { name: lead, label: "导语", widget: text }
+              - { name: desc, label: "描述", widget: text }
+              - { name: tags_title, label: "标签标题", widget: string }
+              - name: tags
+                label: "标签"
+                widget: list
+                field: { name: tag, label: "标签", widget: string }
+          - { name: blog_intro, label: "博客区引言", widget: text }
+          - name: contact
+            label: "联系区"
+            widget: object
+            fields:
+              - { name: title, label: "标题", widget: string }
+              - { name: desc, label: "描述", widget: text }
+              - name: links
+                label: "按钮"
+                widget: list
+                fields:
+                  - { name: label, label: "按钮文字", widget: string }
+                  - { name: url, label: "链接", widget: string }
+                  - { name: type, label: "样式", widget: select, options: [primary, ghost] }
+
+  - name: "blog"
+    label: "观点文章"
+    folder: "_posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: "标题", widget: string }
+      - { name: date, label: "日期", widget: datetime }
+      - { name: description, label: "摘要", widget: text }
+      - { name: body, label: "正文（Markdown）", widget: markdown }
+    meta:
+      - { name: layout, label: "布局", widget: hidden, default: "post" }
