@@ -1,66 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>企业增长：别只看流量，要看转化链路 · 涛talk</title>
-  <meta name="description" content="很多增长项目失败，不是因为没人来，而是来了之后没有路可走。增长的第一件事是修路。" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>企业增长：从流量思维到体系思维 - 涛talk</title>
+  <meta name="description" content="单点获客越来越贵，真正可持续的增长来自把内容、私域与转化连成一套可复用体系。" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260713d" />
 </head>
 <body>
-  <header class="nav">
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="../index.html" class="nav__logo">涛talk<span>.</span></a>
-      <nav class="nav__menu nav__menu--static">
-        <a href="../index.html#home" class="nav__link">首页</a>
-        <a href="../index.html#about" class="nav__link">关于</a>
-        <a href="../index.html#skills" class="nav__link">能力</a>
-        <a href="../index.html#experience" class="nav__link">经历</a>
-        <a href="../index.html#projects" class="nav__link">案例</a>
-        <a href="../index.html#ai" class="nav__link">AI</a>
-        <a href="index.html" class="nav__link is-active">观点</a>
-        <a href="../index.html#contact" class="nav__link">联系</a>
+      <a href="/" class="nav__logo">
+        <img class="nav__logo-img" src="/assets/images/avatar.jpg" alt="涛talk" />
+        涛talk
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu">
+        <a href="/#home" class="nav__link">首页</a>
+        <a href="/#about" class="nav__link">关于</a>
+        <a href="/#skills" class="nav__link">能力</a>
+        <a href="/#experience" class="nav__link">经历</a>
+        <a href="/#projects" class="nav__link">案例</a>
+        <a href="/#ai" class="nav__link">AI</a>
+        <a href="/#blog" class="nav__link">观点</a>
+        <a href="/#contact" class="nav__link">联系</a>
       </nav>
     </div>
   </header>
 
-  <article class="article">
-    <a href="index.html" class="article__back">← 返回观点列表</a>
-    <span class="article__date">2026-05-22</span>
-    <h1 class="article__title">企业增长：别只看流量，要看转化链路</h1>
+  <main>
+    <article class="article">
+      <div class="container article__wrap">
+        <a href="/blog/" class="article__back">← 返回观点</a>
+        <span class="article__date">2026-05-22</span>
+        <h1 class="article__title">企业增长：从流量思维到体系思维</h1>
+        <p class="article__lead">单点获客越来越贵，真正可持续的增长来自把内容、私域与转化连成一套可复用体系。</p>
 
-    <div class="article__body">
-      <p>「增长」这两个字，很容易被理解成「搞更多流量」。但在我做过的好几个项目里，真正卡住增长的，往往不是没人来，而是<strong>人来了之后没有路可走</strong>。</p>
+        <div class="article__body">
+          <p>「增长」这两个字，很容易被理解成「搞来更多流量」。但做了这么多年运营，我越来越确信：<strong>流量思维解决的是「今天」，体系思维解决的是「每一天」。</strong></p>
 
-      <h2>一、增长的第一件事是「修路」</h2>
-      <p>流量是水，转化链路是渠道。渠道没修好，水再多也留不住。所以做增长，我习惯先看全链路：用户从哪来、看到什么、下一步去哪、为什么转化、为什么不转化。</p>
-      <blockquote>没有转化链路的增长，只是把流量从一个池子搬进另一个漏水的池子。</blockquote>
+          <h2>一、流量思维的尽头</h2>
+          <p>靠投放、靠铺量、靠追热点，确实能换来一波增长。但它有两个硬伤：</p>
+          <ul>
+            <li><strong>不可持续</strong>：停投就停涨，预算一紧，数据立刻掉。</li>
+            <li><strong>不可复制</strong>：这次成了，下次未必成，成败高度依赖运气和个别操盘手的发挥。</li>
+          </ul>
+          <p>当获客成本逐年攀升，再靠「买流量」堆增长，利润会被一点点吃掉。</p>
 
-      <h2>二、把增长拆成三层</h2>
-      <ul>
-        <li><strong>流量获取</strong>：SEO、短视频、投放、私域引流——解决「有人来」。</li>
-        <li><strong>用户转化</strong>：落地页、私信流程、SOP、信任建设——解决「留下来、付钱」。</li>
-        <li><strong>体系搭建</strong>：CRM、数据分析、复盘机制——解决「可复制、能放大」。</li>
-      </ul>
-      <p>大多数团队卡在第二层，却一直在第一层加预算。顺序错了，钱就白花。</p>
+          <h2>二、体系思维长什么样</h2>
+          <p>体系思维不追求某一次惊艳，而是追求「每次都还行，长期越来越好」。它把增长拆成一条可以反复运转的链：</p>
+          <blockquote>内容触达 → 私域沉淀 → 转化成交 → 复购裂变 → 数据反哺内容</blockquote>
+          <p>每一环都不必完美，但环环相扣之后，会产生两个流量思维给不了的东西：</p>
+          <ul>
+            <li><strong>复利</strong>：私域里的每个用户都是资产，越积累越值钱，不像投放那样花完即逝。</li>
+            <li><strong>韧性</strong>：某个渠道失灵，体系里其他环节还能兜住，不会一夜归零。</li>
+          </ul>
 
-      <h2>三、用数据而不是感觉做决策</h2>
-      <p>增长不是拍脑袋试错，而是建立可观测的指标：哪个环节掉得最厉害，就先修哪里。我习惯用「漏斗 + 节点 SOP」来定位问题，而不是凭经验猜。</p>
+          <h2>三、把体系「写」成 SOP</h2>
+          <p>体系如果只是存在某个老手的脑子里，那它还是脆弱的。真正稳的体系，要能<strong>沉淀成文档、流程、模板</strong>，让新人有章可循，让增长不依赖某一个人。</p>
+          <p>我在「养发易购」小程序项目里做的，就是把前端获客、私域运营、门店转化整条链路梳理成标准流程（SOP）。上线后即便我不在一线，团队也能照着跑出稳定的结果。这才叫「可复用的增长」。</p>
 
-      <h2>小结</h2>
-      <p>企业增长不是单点爆发，而是一条被设计出来的链路。先修路，再放水；先打通，再放大。这也是我自己做项目一直坚持的底层逻辑。</p>
-    </div>
-  </article>
+          <h2>写在最后</h2>
+          <p>流量思维问的是「这次怎么涨」，体系思维问的是「凭什么一直涨」。前者靠机会，后者靠结构。在存量时代，结构，才是企业真正的护城河。</p>
+        </div>
+
+        <div class="article__divider"></div>
+        <div class="article__footer-cta">
+          <a href="/blog/" class="btn btn--ghost">← 返回全部观点</a>
+        </div>
+      </div>
+    </article>
+  </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> 涛talk</span>
-      <a href="../index.html" class="footer__top">回到首页 ↑</a>
+      <div class="footer__brand">
+        <span class="footer__name">涛talk</span>
+        <span class="footer__tag">新媒体增长运营负责人</span>
+      </div>
+      <a href="/#home" class="footer__top">回到顶部 ↑</a>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="/assets/js/main.js?v=20260713d"></script>
 </body>
 </html>

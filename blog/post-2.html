@@ -1,66 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI 应用：让运营从执行者变成设计者 · 涛talk</title>
-  <meta name="description" content="AI 不是来替代运营的，而是把运营从重复劳动里解放出来，去做更值钱的策略和判断。" />
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI 应用：把 AI 嵌进运营流程，而不是当玩具 - 涛talk</title>
+  <meta name="description" content="AI 的价值不在于生成多少内容，而在于把重复劳动从运营链路里抽走，让人专注判断与决策。" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=20260713d" />
 </head>
 <body>
-  <header class="nav">
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="nav" id="nav">
     <div class="container nav__inner">
-      <a href="../index.html" class="nav__logo">涛talk<span>.</span></a>
-      <nav class="nav__menu nav__menu--static">
-        <a href="../index.html#home" class="nav__link">首页</a>
-        <a href="../index.html#about" class="nav__link">关于</a>
-        <a href="../index.html#skills" class="nav__link">能力</a>
-        <a href="../index.html#experience" class="nav__link">经历</a>
-        <a href="../index.html#projects" class="nav__link">案例</a>
-        <a href="../index.html#ai" class="nav__link">AI</a>
-        <a href="index.html" class="nav__link is-active">观点</a>
-        <a href="../index.html#contact" class="nav__link">联系</a>
+      <a href="/" class="nav__logo">
+        <img class="nav__logo-img" src="/assets/images/avatar.jpg" alt="涛talk" />
+        涛talk
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav__menu" id="navMenu">
+        <a href="/#home" class="nav__link">首页</a>
+        <a href="/#about" class="nav__link">关于</a>
+        <a href="/#skills" class="nav__link">能力</a>
+        <a href="/#experience" class="nav__link">经历</a>
+        <a href="/#projects" class="nav__link">案例</a>
+        <a href="/#ai" class="nav__link">AI</a>
+        <a href="/#blog" class="nav__link">观点</a>
+        <a href="/#contact" class="nav__link">联系</a>
       </nav>
     </div>
   </header>
 
-  <article class="article">
-    <a href="index.html" class="article__back">← 返回观点列表</a>
-    <span class="article__date">2026-06-10</span>
-    <h1 class="article__title">AI 应用：让运营从执行者变成设计者</h1>
+  <main>
+    <article class="article">
+      <div class="container article__wrap">
+        <a href="/blog/" class="article__back">← 返回观点</a>
+        <span class="article__date">2026-06-10</span>
+        <h1 class="article__title">AI 应用：把 AI 嵌进运营流程，而不是当玩具</h1>
+        <p class="article__lead">AI 的价值不在于生成多少内容，而在于把重复劳动从运营链路里抽走，让人专注判断与决策。</p>
 
-    <div class="article__body">
-      <p>很多人对 AI 的态度是两个极端：要么当成噱头不屑一顾，要么当成「一键生成爆款」的魔法棒。我都觉得偏了。在我眼里，AI 是运营体系里的一个新工种——它不替代你，但能替你干掉那些最耗时间的重复活。</p>
+        <div class="article__body">
+          <p>身边很多运营朋友都在「用 AI」，但多数停留在两个阶段：要么当搜索引擎使，要么当自动写作机使。结果往往是一堆看着还行、细看空洞的文案，发出去数据还不如自己写的。</p>
+          <p>问题不在 AI 不行，而在于我们把它当成了<strong>替代品</strong>，而不是<strong>放大器</strong>。</p>
 
-      <h2>一、AI 承接「重复」，人保留「判断」</h2>
-      <p>运营里大量工作是重复的：写初稿、整理数据、找选题、搭框架。这些交给 AI，人就能把精力放在真正值钱的地方——策略方向、用户洞察、转化设计。</p>
-      <blockquote>未来运营的核心竞争力，不是重复执行，而是利用 AI 提升策略、内容和效率。</blockquote>
+          <h2>一、最常见的两个误区</h2>
+          <p><strong>误区一：让 AI 替我想。</strong> 选题、定位、用户洞察这些最值钱的决策，恰恰需要人的经验。把思考外包给模型，产出自然平庸。</p>
+          <p><strong>误区二：让 AI 替我写全部。</strong> 直接要一篇「小红书爆款文案」，得到的往往是套路化的空话。AI 不懂你的品牌语气，也不懂你的真实用户。</p>
+          <blockquote>AI 不该是那个「替你干活的人」，而该是那个「帮你把重复活干完的助理」。</blockquote>
 
-      <h2>二、我实际在用的几种方式</h2>
-      <ul>
-        <li><strong>AI 辅助内容策划</strong>：把账号定位和目标丢给模型，让它产出选题方向和角度清单，我再筛选。</li>
-        <li><strong>AI 生成营销方案</strong>：先给框架和约束，让它出初版，我改判断和节奏，效率至少翻倍。</li>
-        <li><strong>AI 分析行业趋势</strong>：让它从大量信息里提炼结构，辅助我做决策，而不是替我做决策。</li>
-        <li><strong>AI 搭建运营流程</strong>：把 SOP 和提示词固化下来，让团队新人也能稳定产出。</li>
-      </ul>
+          <h2>二、真正有效的用法：嵌进流程</h2>
+          <p>有效的方式，是把 AI 放在流程的「中间环节」，承担确定性高、重复度大的部分，把人的精力释放到判断和创意上：</p>
+          <ul>
+            <li><strong>选题阶段</strong>：把已有的数据（阅读、转化、评论）喂给模型，让它归纳规律、给方向，最终拍板还是人。</li>
+            <li><strong>脚本阶段</strong>：先由人定框架和钩子，再让 AI 基于框架扩写多个版本，人做筛选和微调。</li>
+            <li><strong>数据阶段</strong>：让 AI 读周报、提异常、写初步结论，人只复核关键判断。</li>
+            <li><strong>客服阶段</strong>：用 AI 承接高频重复问题，复杂诉求转人工。</li>
+          </ul>
+          <p>注意一个共同点：<strong>人在回路里（human-in-the-loop）</strong>。AI 负责「做」，人负责「定」和「审」。</p>
 
-      <h2>三、关键在「提示词」和「流程」</h2>
-      <p>AI 的输出质量，取决于你给的上下文和结构。同样是写脚本，丢一句「写个短视频脚本」和给「账号定位 + 目标人群 + 痛点 + 时长 + 风格」，结果天差地别。所以我把提示词和流程当成运营资产来沉淀。</p>
+          <h2>三、衡量 AI 有没有用，看一条指标</h2>
+          <p>别看「生成了多少条」，要看<strong>「团队把时间省到了哪里」</strong>。如果 AI 帮你把 3 小时的机械劳动压到 30 分钟，省下的 2.5 小时你拿去做了用户访谈、优化了转化路径——那才是真提效。</p>
+          <p>反之，如果用 AI 省下的时间，又花在了「改 AI 写废的稿子」上，那它只是把劳动从一种形式换成了另一种。</p>
 
-      <h2>小结</h2>
-      <p>别把 AI 当替代者，也别当许愿池。把它当成一个能力很强、但需要你指挥的新同事——你做设计者，它做执行者，运营效率会完全不同。</p>
-    </div>
-  </article>
+          <h2>写在最后</h2>
+          <p>AI 时代，运营的核心能力不是「会用提示词」，而是「知道哪些环节该交给机器、哪些必须自己扛」。把 AI 嵌进流程，你得到的是一个更快的自己；把 AI 当玩具，你得到的只是一堆漂亮废稿。</p>
+        </div>
+
+        <div class="article__divider"></div>
+        <div class="article__footer-cta">
+          <a href="/blog/" class="btn btn--ghost">← 返回全部观点</a>
+        </div>
+      </div>
+    </article>
+  </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <span>© <span id="year"></span> 涛talk</span>
-      <a href="../index.html" class="footer__top">回到首页 ↑</a>
+      <div class="footer__brand">
+        <span class="footer__name">涛talk</span>
+        <span class="footer__tag">新媒体增长运营负责人</span>
+      </div>
+      <a href="/#home" class="footer__top">回到顶部 ↑</a>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="/assets/js/main.js?v=20260713d"></script>
 </body>
 </html>
