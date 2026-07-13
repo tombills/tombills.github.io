@@ -93,4 +93,19 @@
       counterBtn.textContent = "已点击 " + clicks + " 次";
     });
   }
+
+  /* 6. 顶部滚动进度条 */
+  var progressEl = document.getElementById("scrollProgress");
+  if (progressEl) {
+    var updateProgress = function () {
+      var h = document.documentElement;
+      var scrolled = h.scrollTop;
+      var max = h.scrollHeight - h.clientHeight;
+      var pct = max > 0 ? (scrolled / max) * 100 : 0;
+      progressEl.style.width = pct + "%";
+    };
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+  }
 })();
