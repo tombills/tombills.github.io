@@ -399,12 +399,15 @@ a { color: inherit; text-decoration: none; }
 .ai__desc { color: var(--text-soft); font-size: 17px; margin: 16px 0 4px; }
 
 /* ---------- 博客列表 ---------- */
-.posts { display: flex; flex-direction: column; gap: 14px; }
+.posts { display: flex; flex-direction: column; gap: 16px; }
 .post {
-  display: block; padding: 22px 24px; border: 1px solid var(--border);
-  border-radius: var(--radius); background: var(--bg); transition: border-color .2s, transform .2s;
+  display: flex; flex-direction: column; overflow: hidden;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg); transition: border-color .2s, transform .2s, box-shadow .2s;
 }
-.post:hover { border-color: var(--accent); transform: translateY(-2px); }
+.post:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(79,70,229,.10); }
+.post__thumb { width: 100%; height: 180px; object-fit: cover; display: block; }
+.post__body { padding: 18px 22px 20px; }
 .post__date { color: var(--text-soft); font-size: 13px; }
 .post__title { font-size: 19px; margin: 6px 0; letter-spacing: -.01em; }
 .post__excerpt { color: var(--text-soft); font-size: 15px; }
@@ -444,6 +447,23 @@ a { color: inherit; text-decoration: none; }
   font-size: 18px; line-height: 1.75; color: var(--text-soft);
   margin-bottom: 30px; padding: 14px 0 14px 18px;
   border-left: 3px solid var(--accent); background: var(--bg-soft); border-radius: 0 12px 12px 0;
+}
+
+/* 文章封面横幅 */
+.article__cover {
+  width: 100%; height: auto; border-radius: var(--radius);
+  margin-bottom: 28px;
+  box-shadow: 0 8px 32px rgba(79,70,229,.15), 0 2px 8px rgba(16,24,40,.08);
+}
+
+/* 内文插图 */
+.article__figure { margin: 36px auto; text-align: center; }
+.article__figure img {
+  max-width: 100%; border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(79,70,229,.12);
+}
+.article__figure figcaption {
+  margin-top: 10px; font-size: 14px; color: var(--text-soft); font-style: italic;
 }
 .article__body { font-size: 17px; line-height: 1.9; color: #2b2d33; }
 .article__body h2 { font-size: 23px; line-height: 1.4; letter-spacing: -.01em; margin: 40px 0 14px; }
