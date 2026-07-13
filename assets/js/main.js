@@ -81,17 +81,17 @@
     var startedAt = Date.now();
     setInterval(function () {
       var s = Math.floor((Date.now() - startedAt) / 1000);
-      uptimeEl.textContent = s + " 秒";
+      uptimeEl.textContent = s < 60 ? s + "s" : Math.floor(s / 60) + "m" + (s % 60) + "s";
     }, 1000);
   }
 
-  var counterBtn = document.getElementById("jsCounter");
-  if (counterBtn) {
-    var clicks = 0;
-    counterBtn.addEventListener("click", function () {
-      clicks++;
-      counterBtn.textContent = "已点击 " + clicks + " 次";
-    });
+  var counterEl = document.getElementById("jsCounter");
+  if (counterEl) {
+    var interactions = 0;
+    document.addEventListener("click", function () {
+      interactions++;
+      counterEl.textContent = interactions;
+    }, true);
   }
 
   /* 6. 顶部滚动进度条 */
