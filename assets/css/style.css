@@ -22,6 +22,11 @@
   --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.10);
   --glass-sheen: inset 0 1px 0 rgba(255, 255, 255, 0.6);
   --blur: blur(14px) saturate(180%);
+
+  /* ---------- 品牌渐变（用于标题 / 数字 / 强调） ---------- */
+  --grad: linear-gradient(120deg, #4f46e5 0%, #7c3aed 48%, #2563eb 100%);
+  --grad-soft: linear-gradient(135deg, rgba(79,70,229,.12), rgba(124,58,237,.10));
+  --ease: cubic-bezier(.22, 1, .36, 1);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -78,17 +83,60 @@ a { color: inherit; text-decoration: none; }
 .nav__menu--static { display: flex !important; }
 
 /* ---------- Hero ---------- */
-.hero { padding: 120px 0 100px; }
-.hero__inner { max-width: 720px; }
-.hero__eyebrow { color: var(--accent); font-weight: 600; letter-spacing: .04em; }
-.hero__title { font-size: clamp(40px, 8vw, 68px); line-height: 1.05; letter-spacing: -.03em; margin: 8px 0 16px; }
+.hero { padding: 104px 0 88px; }
+.hero__inner {
+  max-width: 1060px;
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.hero__main { max-width: 600px; }
+.hero__eyebrow {
+  display: inline-block; color: var(--accent); font-weight: 600;
+  letter-spacing: .04em; background: var(--accent-soft);
+  padding: 5px 14px; border-radius: 999px; font-size: 13px; margin-bottom: 2px;
+}
+.hero__title {
+  font-size: clamp(44px, 8vw, 74px); line-height: 1.04; letter-spacing: -.03em;
+  margin: 12px 0 16px;
+  background: var(--grad);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
 .hero__subtitle { font-size: clamp(18px, 3vw, 22px); color: var(--text); font-weight: 600; }
-.hero__desc { color: var(--text-soft); font-size: 17px; margin-top: 12px; max-width: 600px; }
+.hero__desc { color: var(--text-soft); font-size: 17px; margin-top: 12px; max-width: 560px; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.hero__stats { display: flex; gap: 40px; margin-top: 56px; flex-wrap: wrap; }
-.stat { display: flex; flex-direction: column; }
-.stat__num { font-size: 30px; font-weight: 700; letter-spacing: -.02em; }
-.stat__label { color: var(--text-soft); font-size: 14px; }
+.hero__stats { display: flex; gap: 14px; margin-top: 46px; flex-wrap: wrap; }
+.stat {
+  display: flex; flex-direction: column;
+  padding: 12px 18px; border-radius: 14px;
+  background: var(--glass-bg); border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-sheen);
+  -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+}
+.stat__num {
+  font-size: 27px; font-weight: 700; letter-spacing: -.02em;
+  background: var(--grad);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.stat__label { color: var(--text-soft); font-size: 13px; }
+
+/* Hero 右侧浮起玻璃身份卡 */
+.hero__card {
+  background: var(--glass-bg); border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow), var(--glass-sheen);
+  -webkit-backdrop-filter: var(--blur); backdrop-filter: var(--blur);
+  border-radius: calc(var(--radius) + 8px); padding: 38px 30px; text-align: center;
+}
+.hero__avatar {
+  width: 84px; height: 84px; margin: 0 auto 16px; border-radius: 50%;
+  display: grid; place-items: center; font-size: 34px; font-weight: 800; color: #fff;
+  background: var(--grad); box-shadow: 0 12px 30px rgba(79, 70, 229, .35);
+}
+.hero__card-name { font-size: 22px; font-weight: 700; letter-spacing: -.02em; }
+.hero__card-role { color: var(--text-soft); font-size: 14px; margin-top: 2px; }
+.hero__card-tags { justify-content: center; margin-top: 20px; }
 
 /* ---------- 按钮 ---------- */
 .btn {
@@ -110,12 +158,20 @@ a { color: inherit; text-decoration: none; }
   display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent);
   background: var(--accent-soft); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px;
 }
-.section__title { font-size: clamp(28px, 5vw, 38px); letter-spacing: -.02em; }
+.section__title { font-size: clamp(28px, 5vw, 38px); letter-spacing: -.02em; position: relative; display: inline-block; }
+.section__title::after {
+  content: ""; display: block; width: 52px; height: 4px; margin-top: 14px;
+  border-radius: 999px; background: var(--grad);
+}
 .section__intro { color: var(--text-soft); font-size: 17px; margin-bottom: 32px; max-width: 640px; }
 
 /* ---------- 关于 ---------- */
 .about-block { max-width: 760px; }
-.about__lead { font-size: 20px; font-weight: 600; line-height: 1.6; margin-bottom: 28px; }
+.about__lead {
+  font-size: 22px; font-weight: 700; line-height: 1.6; margin-bottom: 28px;
+  background: var(--grad);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
 .about__subtitle { font-size: 16px; margin: 26px 0 12px; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag {
@@ -143,10 +199,17 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 560px) { .adv-grid { grid-template-columns: 1fr; } }
 
 /* ---------- 能力卡片 ---------- */
-.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: skill; }
 .skill-card {
   background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 22px; box-shadow: var(--shadow); transition: transform .2s, border-color .2s;
+  padding: 22px; box-shadow: var(--shadow); transition: transform .2s var(--ease), border-color .2s;
+  position: relative; counter-increment: skill;
+}
+.skill-card::after {
+  content: "0" counter(skill);
+  position: absolute; top: 18px; right: 18px;
+  font-size: 12px; font-weight: 700; color: var(--accent);
+  background: var(--accent-soft); padding: 3px 9px; border-radius: 999px;
 }
 .skill-card:hover { transform: translateY(-3px); border-color: #d8dbe2; }
 .skill-card__title {
@@ -210,8 +273,12 @@ a { color: inherit; text-decoration: none; }
 .cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .case {
   background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
-  padding: 24px; box-shadow: var(--shadow); transition: transform .2s, border-color .2s;
-  display: flex; flex-direction: column;
+  padding: 24px; box-shadow: var(--shadow); transition: transform .2s var(--ease), border-color .2s;
+  display: flex; flex-direction: column; position: relative; overflow: hidden;
+}
+.case::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--grad); border-radius: var(--radius) var(--radius) 0 0;
 }
 .case:hover { transform: translateY(-3px); border-color: #d8dbe2; }
 .case__head { margin-bottom: 16px; }
@@ -323,6 +390,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 900px) {
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .cases { grid-template-columns: 1fr; }
+  .hero__inner { grid-template-columns: 1fr; gap: 40px; }
 }
 @media (max-width: 760px) {
   .nav__toggle { display: flex; }
