@@ -237,8 +237,8 @@ a { color: inherit; text-decoration: none; }
   margin-top: 40px; padding: 28px; border: 1px solid var(--border);
   border-radius: var(--radius); background: var(--bg); box-shadow: var(--shadow);
 }
-.tech-built__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.tech-built__title { font-size: 20px; letter-spacing: -.01em; margin-bottom: 8px; }
+.tech-built__head { margin-bottom: 4px; }
+.tech-built__title { font-size: 20px; letter-spacing: -.01em; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .tech-built__desc { color: var(--text-soft); font-size: 15px; max-width: 640px; }
 .tech-built__live {
   flex-shrink: 0; display: inline-flex; align-items: center; gap: 7px;
