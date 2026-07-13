@@ -400,6 +400,11 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- 博客列表 ---------- */
 .posts { display: flex; flex-direction: column; gap: 16px; }
+/* 首页「我的观点」：多列网格，避免单列长列表拥挤 */
+.views-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.views-grid .post__excerpt { font-size: 14px; line-height: 1.6; }
+@media (max-width: 980px) { .views-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .views-grid { grid-template-columns: 1fr; } }
 .post {
   display: flex; flex-direction: column; overflow: hidden;
   border: 1px solid var(--border); border-radius: var(--radius);
