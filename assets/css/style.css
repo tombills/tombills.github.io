@@ -353,6 +353,11 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 6px; letter-spacing: .04em;
 }
 .case__block p { color: var(--text-soft); font-size: 14px; }
+.case__hl {
+  font-weight: 800; letter-spacing: -.01em;
+  background: var(--grad); -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+}
 
 /* 旗舰标杆案例（整宽） */
 .case--feature { grid-column: 1 / -1; padding: 30px 32px; }
