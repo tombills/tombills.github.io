@@ -263,23 +263,35 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 760px) { .tech-demo { grid-template-columns: 1fr; } }
 
 /* ---------- 工作经历 ---------- */
-.timeline { display: flex; flex-direction: column; gap: 28px; max-width: 760px; }
-.timeline__item { border-left: 2px solid var(--border); padding-left: 24px; position: relative; }
-.timeline__item::before {
-  content: ""; position: absolute; left: -7px; top: 6px; width: 12px; height: 12px;
-  background: var(--accent); border-radius: 50%; border: 3px solid var(--bg-soft);
+.timeline { display: flex; flex-direction: column; gap: 22px; }
+.timeline__item {
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px 26px; box-shadow: var(--shadow); position: relative; overflow: hidden;
+  transition: transform .2s var(--ease), border-color .2s;
 }
-.timeline__meta { display: flex; gap: 12px; flex-wrap: wrap; color: var(--text-soft); font-size: 14px; }
-.timeline__date { font-weight: 600; color: var(--accent); }
-.timeline__role { font-size: 19px; margin: 6px 0 14px; letter-spacing: -.01em; }
+.timeline__item::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--grad); border-radius: var(--radius) var(--radius) 0 0;
+}
+.timeline__meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 2px; }
+.timeline__date {
+  font-size: 13px; font-weight: 700; color: var(--accent);
+  background: var(--accent-soft); padding: 4px 12px; border-radius: 999px; letter-spacing: .02em;
+}
+.timeline__place { font-size: 14px; color: var(--text-soft); font-weight: 600; }
+.timeline__role { font-size: 19px; margin: 10px 0 4px; letter-spacing: -.01em; }
 .block-label {
   font-size: 13px; font-weight: 700; color: var(--text); margin: 18px 0 10px;
-  text-transform: none; letter-spacing: .02em;
+  padding-left: 12px; position: relative; letter-spacing: .02em;
+}
+.block-label::before {
+  content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+  width: 4px; height: 14px; background: var(--grad); border-radius: 2px;
 }
 .mini-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.mini-list li { color: var(--text-soft); font-size: 15px; padding-left: 18px; position: relative; }
+.mini-list li { color: var(--text-soft); font-size: 15px; padding-left: 18px; position: relative; line-height: 1.6; }
 .mini-list li::before { content: "·"; position: absolute; left: 4px; color: var(--accent); font-weight: 700; }
-.mini-list--check li::before { content: "✓"; left: 0; }
+.mini-list--check li::before { content: "✓"; left: 0; color: #16a34a; }
 
 /* ---------- 项目案例 ---------- */
 .cases { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; counter-reset: casec; }
@@ -293,7 +305,7 @@ a { color: inherit; text-decoration: none; }
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
   background: var(--grad); border-radius: var(--radius) var(--radius) 0 0;
 }
-.case:hover { transform: translateY(-3px); border-color: #d8dbe2; }
+.case:hover, .timeline__item:hover { transform: translateY(-3px); border-color: #d8dbe2; }
 .case__head { margin-bottom: 16px; }
 .case__no {
   display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent);
@@ -408,7 +420,7 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 16px 48px rgba(31, 38, 135, .16), var(--glass-sheen);
 }
 /* 卡片悬停时玻璃更"亮"一点 */
-.skill-card:hover, .case:hover, .post:hover, .tech-built:hover {
+.skill-card:hover, .case:hover, .post:hover, .tech-built:hover, .timeline__item:hover {
   border-color: rgba(255, 255, 255, .85);
   box-shadow: 0 12px 40px rgba(31, 38, 135, .16), var(--glass-sheen);
 }
